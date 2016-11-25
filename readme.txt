@@ -20,17 +20,13 @@ To install this app, follow the instructions listed below:
   - Dont let lack of Linux knowledge slow you down as you wrestle with this app.
 
 - After you login, you should see if Anaconda Python is installed already with this shell command:
-  - ~/anaconda3/bin/python
+
+    ~/anaconda3/bin/python
 
 - If Anaconda is not installed, you should install it because this app depends on Anaconda:
 
-
-
-
-
-
-
-
-
-
-
+    wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+    bash Anaconda3-4.2.0-Linux-x86_64.sh
+    mv anaconda3/bin/curl anaconda3/bin/curl_ana
+    echo 'export PATH=${HOME}/anaconda3/bin:$PATH' >> ~/.bashrc
+    bash

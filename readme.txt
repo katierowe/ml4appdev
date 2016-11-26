@@ -43,10 +43,14 @@ To install this app, follow the instructions listed below:
 
     sudo apt-get install gitk autoconf bison build-essential libssl-dev libyaml-dev \
     libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3  sqlite3 curl   \
-    libgdbm-dev libsqlite3-dev postgresql postgresql-server-dev-all aptitude        \
-    libpq-dev emacs wget openssh-server ruby ruby-dev libbz2-dev linux-headers-$(uname -r) \
-    r-base r-base-dev
+    libgdbm-dev libsqlite3-dev postgresql postgresql-server-dev-all aptitude r-base r-base-dev \
+    libpq-dev emacs wget openssh-server ruby ruby-dev libbz2-dev linux-headers-$(uname -r)
+    
 
 - After you clone mlcl2 to ~/mlcl2 , you should consider this app to be installed.
+
+- To operate the app just type in one shell command:
+
+    ./slice_learn_predict.bash
 
 If you have questions, find bugs or offer enhancements, e-me: bikle101@gmail.com

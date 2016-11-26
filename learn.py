@@ -23,7 +23,7 @@ w_l  = linr_model.coef_
 m_l  = [w0_f] + w_l.tolist()
 m_sr = pd.Series(m_l)
 m_s  = '/tmp/iris_model.csv'
-m_sr.to_csv(m_s, float_format='%4.4f', index=False, header=['weights'])
+m_sr.to_csv(m_s, float_format='%4.2f', index=False, header=['weights'])
 print('Model saved to: '+ '/tmp/iris_model.csv')
 'bye'
 

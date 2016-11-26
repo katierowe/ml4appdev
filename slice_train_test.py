@@ -20,8 +20,8 @@ test_df = iris1_df[140:150]
 
 # I should write to csv files:
 
-train_df.to_csv('/tmp/iris_train.csv', float_format='%4.4f', index=False)
-test_df.to_csv( '/tmp/iris_test.csv' , float_format='%4.4f', index=False)
+train_df.to_csv('/tmp/iris_train.csv', float_format='%4.2f', index=False)
+test_df.to_csv( '/tmp/iris_test.csv' , float_format='%4.2f', index=False)
 
 print('Train Data should be here: /tmp/iris_train.csv')
 print('Test  Data should be here: /tmp/iris_test.csv' )

@@ -3,17 +3,18 @@
 # This script should slice iris.csv into /tmp/iris_train.csv and /tmp/iris_test.csv
 
 import pandas as pd
-import pdb
 
 # I should read iris.csv into a DataFrame:
 
 iris0_df = pd.read_csv('iris.csv')
-iris1_df = iris0_df[['f0','f1']]
+iris1_df = iris0_df
+iris_type_dict = {'setosa':0, 'virginica':1, 'versicolor':2}
+iris1_df.loc[:, 'iris_type'] = [iris_type_dict[t] for t in iris1_df['iris_type'].values]
 
 # I should get the training data:
 
 train_df = iris1_df[0:140]
-
+train_df = train_df.sample(frac=1).reset_index(drop=True)
 # I should get the test data:
 
 test_df = iris1_df[140:150]

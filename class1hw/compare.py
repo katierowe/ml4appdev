@@ -6,7 +6,7 @@ import pandas as pd
 import numpy  as np
 
 # I should get the data I want to compare:
-predictions_df = pd.read_csv('/tmp/iris_predicitons.csv')
+predictions_df = pd.read_csv('/tmp/iris_predictions.csv')
 
 predictions_df['difference'] = predictions_df.f1 - predictions_df.f1_prediction
 

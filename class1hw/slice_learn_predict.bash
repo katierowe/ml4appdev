@@ -8,11 +8,10 @@
 # It should predict f1 values from f0 values in /tmp/iris_test.csv
 # It should compare predicted f1 values from observed f1 values in /tmp/iris_test.csv
 
-python slice_train_test.py
+python parse_data.py
 python learn.py
 python predict.py
 python compare.py
-
 
 exit
 

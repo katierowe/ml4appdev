@@ -1,5 +1,10 @@
 readme.txt
 
+This code was modified from the original version at: https://github.com/danbikle/mlcl2
+
+It is a simple machine learning exercise using the iris dataset.
+
+Here is the original readme text:
 For an end-user, this app should offer a Command Line Interface (CLI) to a simple Machine Learning App.
 
 If you are the administrator, you should rely on Bash and Python to administer the app.

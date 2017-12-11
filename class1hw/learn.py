@@ -26,7 +26,7 @@ if __name__ == '__main__':
         X = np.array(train_df[coeff_list])
 
         if y_var == 'iris_type':
-            model = linear_model.SGDClassifier()
+            model = linear_model.LogisticRegression()
         else:
             model = linear_model.LinearRegression()
 

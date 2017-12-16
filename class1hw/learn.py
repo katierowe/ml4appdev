@@ -8,13 +8,12 @@ determine whether a regression or classification model should be used.
 import pandas as pd
 import numpy as np
 from sklearn import linear_model
-import cPickle as pickle
+import warnings
 
+import iris_tools
 
-def dump_to_pickle(model, file_path):
-    with open(file_path, 'wb') as output:
-        pickler = pickle.Pickler(output, -1)
-        pickler.dump(model)
+# Filter warning deemed harmless: https://github.com/scipy/scipy/issues/5998
+warnings.filterwarnings(action="ignore", module="scipy", message="^internal gelsd")
 
 
 if __name__ == '__main__':
@@ -32,4 +31,5 @@ if __name__ == '__main__':
 
             # I should call fit() to create the model:
         model.fit(X, train_df[y_var])
-        dump_to_pickle(model, '/tmp/' + y_var + '_model.pkl')
+        iris_tools.dump_to_pickle(model, '/tmp/' + y_var + '_model.pkl')
+    print "Models have been trained and stored."
